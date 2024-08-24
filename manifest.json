@@ -2,16 +2,16 @@
   "$schema": "https://github.com/LiteLoaderQQNT/Plugin-Template/raw/main/manifest_schema.json",
   "manifest_version": 4,
   "type": "theme",
-  "name": "HK主题",
-  "slug": "LiteLoaderQQNT-HK-Theme",
-  "description": "自制轻量级主题,偏向深色",
-  "version": "1.0.5",
+  "name": "Stapxs QQ Lite 2.0 Theme",
+  "slug": "Stapxs-QQ-Lite-Theme",
+  "description": "Stapxs-QQ-Lite-2.0 Electron 版 LiteLoaderQQNT 迁移主题。",
+  "version": "1.0.0",
   "icon": "./res/icon.png",
   "thumb": "./res/icon.png",
   "authors": [
     {
-      "name": "huan_kong",
-      "link": "https://github.com/huankong233"
+      "name": "stapxs",
+      "link": "https://github.com/Stapxs"
     }
   ],
   "platform": ["win32", "linux", "darwin"],
@@ -21,7 +21,7 @@
     "preload": "./src/preload.js"
   },
   "repository": {
-    "repo": "huankong233/LiteLoaderQQNT-HK-Theme",
+    "repo": "Stapxs/Stapxs-QQ-Lite-Theme",
     "branch": "main"
   }
 }

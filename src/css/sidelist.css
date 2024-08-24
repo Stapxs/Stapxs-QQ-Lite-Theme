@@ -1,0 +1,84 @@
+/* 侧边列表 */
+
+.sidebar,
+.tab-container {
+  background: transparent !important;
+}
+.recent-contact-list div.viewport-list__inner > div.recent-contact-item--selected > div > div {
+  background: var(--color-main);
+}
+
+.radio-tab__item--background {
+    background: var(--color-main) !important;
+}
+.radio-tab__item--selected {
+    color: #fff !important;
+}
+
+.list-toggler {
+    padding-top: 85px;
+}
+.list-toggler::before {
+    color: var(--color-main) !important;
+    margin-bottom: 10px;
+    position: relative;
+    margin-left: 20px;
+    margin-top: -60px;
+    font-weight: bold;
+    text-wrap: nowrap;
+    content: '信息';
+}
+.list-toggler > div {
+    margin-left: -45px;
+}
+.recent-contact-list, .group-assistent-list {
+    padding-right: 4px;
+}
+.recent-contact-list::-webkit-scrollbar,                    /* 消息列表滚动条 */
+.group-assistent-list::-webkit-scrollbar {
+    display: none !important;
+}
+
+.contact-top-bar {
+    position: absolute;
+    z-index: 10;
+    top: 35px;
+}
+
+.list-item__container > div.list-item__content {
+    padding: 10px !important;
+}
+.list-item__avatar > div {
+    outline: 2px solid var(--color-card-2);
+    border-radius: 7px !important;
+    height: 33px !important;
+    width: 33px !important;
+}
+
+.contact,
+.q-collapse-item__header,
+.contact div.tab-header {
+    background: transparent !important;
+}
+.contact > div:last-child {
+    margin-top: 25px;
+}
+.contact > div:last-child > div:first-child {
+    margin-top: 40px;
+}
+.contact > div:last-child::before {
+    content: '联系人';
+    font-weight: bold;
+    margin-left: 20px;
+    color: var(--color-main);
+}
+
+.q-collapse-item__icon {
+    background: var(--color-main);
+    height: 40%;
+    width: 5px;
+    border-radius: 7px;
+}
+.q-collapse-item__icon > i {
+    display: none;
+}

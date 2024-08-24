@@ -1,4 +1,4 @@
-const dev = false
+const dev = true
 
 const fs = require('fs')
 const path = require('path')
@@ -6,7 +6,25 @@ const { BrowserWindow, ipcMain } = require('electron')
 
 // 获取当前有哪些css
 const cssPath = path.join(__dirname, 'css')
-const cssFiles = fs.readdirSync(cssPath).map((fileName) => path.join(cssPath, fileName))
+// 寻找这个文件夹下所有的 .css 后缀文件（包括子文件夹
+function getAllCssFiles(dirPath, arrayOfFiles) {
+  const files = fs.readdirSync(dirPath);
+
+  arrayOfFiles = arrayOfFiles || [];
+
+  files.forEach((file) => {
+    const filePath = path.join(dirPath, file);
+    if (fs.statSync(filePath).isDirectory()) {
+      arrayOfFiles = getAllCssFiles(filePath, arrayOfFiles);
+    } else if (file.endsWith('.css')) {
+      arrayOfFiles.push(filePath);
+    }
+  });
+
+  return arrayOfFiles;
+}
+
+const cssFiles = getAllCssFiles(cssPath);
 
 // 更新样式
 function updateStyle(webContents) {

@@ -1,0 +1,21 @@
+.q-empty-page, .aio {
+    box-shadow: -5px 0 4px -5px var(--color-shader);
+    background: var(--color-card);
+    margin-left: 5px;
+}
+
+.chat-header {
+    margin: 20px;
+    border-radius: 7px;
+    display: flex !important;
+    align-items: center !important;
+    padding: 0 20px !important;
+    background: rgba(var(--color-card-1-rgb),.8);
+    backdrop-filter: blur(50px);
+    z-index: 10;
+}
+
+.group-chat {
+    margin-top: -55px;
+    height: calc(100% + 55px) !important;
+}

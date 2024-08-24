@@ -1,0 +1,4 @@
+[submodule "src/css/bcui"]
+	path = src/css/bcui
+	url = https://github.com/Stapxs/Border-Card-UI.git
+	branch = js-bcui

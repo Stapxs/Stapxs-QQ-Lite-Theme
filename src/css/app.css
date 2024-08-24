@@ -1,0 +1,8 @@
+.q-button {
+    background: var(--color-main);
+    color: #fff;
+}
+.q-button:hover {
+    background: var(--color-main);
+    opacity: 0.8;
+}
