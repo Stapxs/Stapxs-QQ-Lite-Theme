@@ -35,7 +35,7 @@
 }
 
 .q-notification {
-    background: var(--color-card-1);
+    background: var(--color-card-1) !important;
 }
 
 .q-input {
@@ -47,4 +47,9 @@
 .q-switch.is-active:hover,
 .q-switch.is-active {
     background: var(--color-main);
+}
+
+.q-empty-page {
+    background: transparent;
+    box-shadow: unset;
 }

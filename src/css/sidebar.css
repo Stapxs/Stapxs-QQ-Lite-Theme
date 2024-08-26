@@ -1,7 +1,10 @@
 /* 侧边栏 */
 
 .sidebar {
-  background: transparent !important;
+    background: rgba(var(--color-card-rgb),.2) !important;
+}
+.sidebar > nav {
+    background: transparent !important;
 }
 .qq-logo,
 .sidebar__avatar {
@@ -16,8 +19,8 @@
     background: var(--color-main) !important;
     opacity: 1 !important;
 }
-.sidebar__nav div.tab-item > div.tab-item-img {
-    filter: brightness(100) invert(0);
+.sidebar__nav div.tab-item > div.is-active + div.tab-item-img {
+    filter: brightness(0) invert(1);
 }
 /* 隐藏 .sidebar__nav > div 超过第二个的元素 */
 .sidebar__nav > div:nth-child(n+3) {

@@ -1,11 +1,28 @@
 /* 侧边列表 */
 
-.sidebar,
 .tab-container {
-  background: transparent !important;
+    background: rgba(var(--color-card-rgb),.2) !important;
 }
-.recent-contact-list div.viewport-list__inner > div.recent-contact-item--selected > div > div {
-  background: var(--color-main);
+
+
+.recent-contact {
+    background: none !important;
+}
+.recent-contact .viewport-list__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 8px;
+}
+
+.recent-contact-list div.viewport-list__inner > div.recent-contact-item {
+    border-radius: 7px;
+}
+.recent-contact-list div.viewport-list__inner > div.recent-contact-item > div {
+    padding: 10px 15px !important;
+}
+.recent-contact-list div.viewport-list__inner > div.recent-contact-item--selected > div {
+  background: var(--color-main) !important;
 }
 
 .radio-tab__item--background {
@@ -48,6 +65,9 @@
     margin-top: 30px;
 }
 
+.list-item:hover {
+    background-color: rgba(var(--color-card-1) 0.1) !important;
+  }
 .list-item__container > div.list-item__content {
     padding: 10px !important;
 }
@@ -88,13 +108,12 @@
 
 
 .main-search > div:nth-child(2) > div {
+    box-shadow: 0 0 5px var(--color-shader);
     height: calc(100% - 100px) !important;
     margin-top: 30px;
     margin-left: 5%;
     overflow: hidden;
     width: calc(95% - 5px);
-}
-.main-search > div:nth-child(2) > div > div {
     background: var(--color-card-1);
     border-radius: 7px;
     padding-top: 10px;
