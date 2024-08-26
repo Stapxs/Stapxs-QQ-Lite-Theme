@@ -16,7 +16,11 @@
 }
 
 .list-toggler {
-    padding-top: 85px;
+    padding-top: 90px;
+    pointer-events: none;
+}
+.list-toggler > div {
+    pointer-events: all;
 }
 .list-toggler::before {
     color: var(--color-main) !important;
@@ -40,9 +44,8 @@
 }
 
 .contact-top-bar {
-    position: absolute;
-    z-index: 10;
-    top: 35px;
+    margin-bottom: -100px;
+    margin-top: 30px;
 }
 
 .list-item__container > div.list-item__content {
@@ -81,4 +84,18 @@
 }
 .q-collapse-item__icon > i {
     display: none;
+}
+
+
+.main-search > div:nth-child(2) > div {
+    height: calc(100% - 100px) !important;
+    margin-top: 30px;
+    margin-left: 5%;
+    overflow: hidden;
+    width: calc(95% - 5px);
+}
+.main-search > div:nth-child(2) > div > div {
+    background: var(--color-card-1);
+    border-radius: 7px;
+    padding-top: 10px;
 }

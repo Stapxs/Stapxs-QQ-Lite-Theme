@@ -13,9 +13,59 @@
     background: rgba(var(--color-card-1-rgb),.8);
     backdrop-filter: blur(50px);
     z-index: 10;
+    box-shadow: 0 0 5px var(--color-shader);
 }
 
 .group-chat {
     margin-top: -55px;
     height: calc(100% + 55px) !important;
+}
+
+/* 消息 */
+.message-content__wrapper > div {
+    background: var(--color-card-1) !important;
+}
+.message-content__wrapper >div.container--self {
+    background: var(--color-main) !important;
+    color: #fff !important;
+}
+.chat-msg-area__tip--top > div.q-notification {
+    margin-top: calc(100vh - 266px);
+    margin-right: 25px;
+}
+
+/* 群/好友信息栏 */
+.side-panel {
+    margin-top: 10px;
+    height: calc(100vh - 110px) !important;
+    border-radius: 7px;
+    box-shadow: 0 0 5px var(--color-shader);
+}
+.side-panel > div.panel-content > div {
+    padding: 5px 10px !important;
+    background: var(--color-card);
+    border-radius: 7px;
+}
+.group-member {
+    background: var(--color-card-1) !important;
+}
+
+/* 附加面板 */
+.expression-panel-inner {
+    margin-bottom: 10px;
+}
+.expression-panel-inner > div {
+    box-shadow: 0 0 5px var(--color-shader) !important;
+    background: var(--color-card-1) !important;
+}
+
+.sticker-panel {
+    height: 300px !important;
+}
+.sticker-panel > div:last-child > div:first-child {
+    height: 250px !important;
+}
+.sticker-panel div.tabs-container-item-active:hover,
+.sticker-panel div.tabs-container-item-active {
+    background: var(--color-main);
 }

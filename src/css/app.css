@@ -6,3 +6,45 @@
     background: var(--color-main);
     opacity: 0.8;
 }
+
+.q-context-menu {
+    background: transparent;
+    backdrop-filter: blur(10px);
+    min-width: 150px;
+}
+.q-context-menu > a {
+    flex-direction: row-reverse;
+    display: flex;
+}
+.q-context-menu > div > a > div {       /* 有二级菜单的项的图标就不要了 */
+    display: none;
+}
+.q-context-menu > a > div {             /* 有二级菜单的项的图标就不要了 */
+    margin-right: 10px;
+}
+.q-context-menu > div > a > span,
+.q-context-menu > a > span {
+        margin-right: 10px;
+}
+.q-context-menu > a:hover {
+    background: var(--color-main);
+    color: #fff;
+}
+.q-context-menu > a > div {
+    margin-right: 0;
+}
+
+.q-notification {
+    background: var(--color-card-1);
+}
+
+.q-input {
+    border-bottom: 2px solid var(--color-main) !important;
+    border-radius: 7px !important;
+    height: 32px;
+}
+
+.q-switch.is-active:hover,
+.q-switch.is-active {
+    background: var(--color-main);
+}
