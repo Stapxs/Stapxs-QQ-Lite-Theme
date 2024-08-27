@@ -1,7 +1,7 @@
 /* 输入框 */
 .aio .chat-input-area {
   background: var(--color-card-1);
-  border-radius: 16px;
+  border-radius: 7px;
   margin: 20px;
   z-index: 9;
 }

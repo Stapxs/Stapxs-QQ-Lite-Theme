@@ -26,3 +26,9 @@
 .sidebar__nav > div:nth-child(n+3) {
     display: none !important;
 }
+
+@media (prefers-color-scheme: dark) {
+    .sidebar__nav div.tab-item > div.is-active + div.tab-item-img {
+        filter: brightness(0);
+    }
+}

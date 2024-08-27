@@ -21,15 +21,20 @@
 .recent-contact-list div.viewport-list__inner > div.recent-contact-item > div {
     padding: 10px 15px !important;
 }
-.recent-contact-list div.viewport-list__inner > div.recent-contact-item--selected > div {
+body[q-theme="dark"][is-simple-theme="true"] .recent-contact-list div.viewport-list__inner > div.recent-contact-item--selected .item__content,
+.recent-contact-list div.viewport-list__inner > div.recent-contact-item--selected .item__content {
   background: var(--color-main) !important;
+}
+body[q-theme="dark"][is-simple-theme="true"] .recent-contact-list div.viewport-list__inner > div.recent-contact-item--selected .item__content div,
+.recent-contact-list div.viewport-list__inner > div.recent-contact-item--selected .item__content div {
+    color: var(--color-font-r) !important;
 }
 
 .radio-tab__item--background {
     background: var(--color-main) !important;
 }
 .radio-tab__item--selected {
-    color: #fff !important;
+    color: var(--color-font-r) !important;
 }
 
 .list-toggler {
@@ -71,7 +76,7 @@
 .list-item__container > div.list-item__content {
     padding: 10px !important;
 }
-.list-item__avatar > div {
+.recent-contact-item .avatar {
     outline: 2px solid var(--color-card-2);
     border-radius: 7px !important;
     height: 33px !important;
@@ -106,7 +111,6 @@
     display: none;
 }
 
-
 .main-search > div:nth-child(2) > div {
     box-shadow: 0 0 5px var(--color-shader);
     height: calc(100% - 100px) !important;
@@ -117,4 +121,14 @@
     background: var(--color-card-1);
     border-radius: 7px;
     padding-top: 10px;
+}
+
+.network-tip {
+    top: 100%;
+    position: absolute;
+    width: 95%;
+    transform: translateY(calc(-100% - 10px));
+    z-index: 11;
+    border-radius: 7px;
+    box-shadow: 0 0 5px var(--color-shader);
 }

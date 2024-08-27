@@ -1,6 +1,6 @@
 .q-button {
     background: var(--color-main);
-    color: #fff;
+    color: var(--color-font-r);
 }
 .q-button:hover {
     background: var(--color-main);
@@ -28,7 +28,7 @@
 }
 .q-context-menu > a:hover {
     background: var(--color-main);
-    color: #fff;
+    color: var(--color-font-r);
 }
 .q-context-menu > a > div {
     margin-right: 0;
