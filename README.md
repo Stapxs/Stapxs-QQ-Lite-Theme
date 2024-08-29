@@ -1,20 +1,27 @@
-# Stapxs QQ Lite 2.0 Theme
+<p align="center">
+  <h2 align="center" style="font-weight: 600">Border Card UI Theme</h2>
+  <p align="center">
+    <strong>一个轻便简洁的 LiteLoaderQQNT 主题</strong>
+    <br />
+    <br />
+    这是一个来自 Stapxs QQ Lite 2.0 第三方客户端样式的迁移版
+  </p>
+</p>
 
-嗨嗨嗨！这是 Stapxs QQ Lite 2.0 Electron 版样式的 LiteLoaderQQNT 迁移版！
-如果你不想使用 OneBot 连接 Stapxs QQ Lite 而且打算使用官方 QQ，并且喜欢 Stapxs QQ Lite 的样式的话；这个就是写给你用的！
+![view](res/preview.png)
 
-我会尽量将 Stapxs QQ Lite 的样式通过主题的方式更改到 QQ 官方客户端上，让它看起来更像 Stapxs QQ Lite！
-
-看看 Stapxs QQ Lite？ -> https://github.com/Stapxs/Stapxs-QQ-Lite-2.0
-
-![preview](preview.png)
+## 版本支持
+- LiteLoaderQQNT >= 1.2.0
+- NTQQ Build >= 27254
 
 ## 使用方法
 ### 使用仓库版本
 ~~~
-git clone --recursive https://github.com/Stapxs/Stapxs-QQ-Lite-Theme.git
+git clone https://github.com/Stapxs/Stapxs-QQ-Lite-Theme.git
 ~~~
-- 克隆仓库将文件夹或从仓库 Releases 发布页下载 zip。
-- 将 zip 移动到 ```LiteLoaderQQNT``` plugins 目录下后重启 QQ
+- 克隆仓库、下载分支 zip 或从仓库 Releases 发布页下载 zip
+- 将 zip 解压移动到 ```LiteLoaderQQNT``` plugins 目录下
+- 重启 QQ
 
-PS：请勿直接下载分支 zip，会缺失子模块内的部分 css 文件。
+## 反馈问题
+因为我在使用 macOS，所以本主题优先适配 macOS；如果在其他平台遇到了奇怪的布局错误（包括主题色未生效）等问题，欢迎提交 issue！

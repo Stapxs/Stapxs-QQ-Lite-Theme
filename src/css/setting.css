@@ -1,0 +1,127 @@
+.liteloader > div img {
+    width: 20px;
+    height: 20px;
+}
+
+/* 覆盖原始设置样式 */
+.setting-item-title {
+    color: var(--color-font);
+    font-weight: var(--font-bold);
+    font-size: min(var(--font_size_3),18px);
+    line-height: min(var(--line_height_3),24px);
+    margin: 0px 0px 8px 16px;
+}
+.chat-page {
+    background-color: var(--color-card);
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    margin-bottom: 24px;
+    padding: 0px 16px;
+}
+.chat-page__item {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0px;
+}
+
+/*  附加设置样式 */
+.chat-page__item div.tips {
+    color: var(--color-font-2);
+    margin-top: 4px;
+    font-size: min(var(--font_size_2) ,16px);
+    line-height: min(var(--line_height_2) ,22px);
+}
+.chat-page__item > select {
+    border: 1px solid var(--color-card-2);
+    height: 24px;
+    width: 150px;
+}
+.chat-page__item button.ss-button {
+    margin: 5px;
+    font-weight: normal;
+    font-size: 0.7rem;
+    height: 24px;
+    width: 100px;
+}
+.chat-page__item input[type="range"] {
+    -webkit-appearance: none;
+    background: var(--color-card-1);
+    height: 5px;
+    border-radius: 5px;
+}
+.chat-page__item input[type="range"]::-webkit-slider-thumb,
+.chat-page__item input[type="range"]::-moz-range-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    background: var(--color-main);
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+/* 设置页面顶栏 */
+.main-card {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    overflow: hidden;
+    margin-top: -10px;
+}
+.main-card > div.bg-left {
+    width: calc(100px + 10%);
+    background: var(--color-main);
+    margin: -200px 0 -200px -100px;
+    transform: rotate(30deg);
+    border: 10px solid var(--color-card-2);
+}
+.main-card > div.bg-right {
+    width: calc(100px + 10%);
+    background: var(--color-main);
+    margin: -200px -100px -200px 0;
+    transform: rotate(30deg);
+    border: 10px solid var(--color-card-2);
+}
+.info-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+}
+.info-card > svg {
+    height: 3rem;
+    fill: var(--color-main);
+}
+.info-card > span {
+    display: block;
+}
+.info-card > span.title {
+    font-size: 1.1rem;
+    color: var(--color-main);
+    margin-top: 10px;
+}
+.info-card > span.title > span {
+    font-size: 0.8rem;
+    color: var(--color-font-2);
+}
+.info-card > a {
+    color: var(--color-font-r);
+    background: var(--color-main);
+    padding: 3px 15px;
+    border-radius: 5rem;
+    margin-top: 5px;
+    font-size: 0.8rem;
+}
+.info-copy {
+    margin-bottom: 40px;
+}
+.info-copy > span {
+    width: 100%;
+    display: block;
+    text-align: center;
+    font-size: 0.8rem;
+    margin-top: 5px;
+    color: var(--color-font-2);
+}

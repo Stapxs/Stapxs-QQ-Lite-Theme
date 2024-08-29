@@ -1,7 +1,7 @@
 /* 侧边列表 */
 
 .tab-container {
-    background: rgba(var(--color-card-rgb),.2) !important;
+    background: transparent !important;
 }
 
 

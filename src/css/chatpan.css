@@ -1,7 +1,11 @@
-.q-empty-page, .aio {
+.two-col-layout__main {
     box-shadow: -5px 0 4px -5px var(--color-shader);
+    background-size: cover !important;
     background: var(--color-card);
     margin-left: 5px;
+}
+.aio {
+    background: rgba(var(--color-card-rgb), 0.3);
 }
 
 .chat-header {
@@ -88,6 +92,14 @@
     border-radius: 7px;
     margin-top: 5px;
     padding: 2px;
+}
+
+/* 输入框 */
+.aio .chat-input-area {
+    background: var(--color-card-1);
+    border-radius: 7px;
+    margin: 20px;
+    z-index: 9;
 }
 
 @media (prefers-color-scheme: dark) {
