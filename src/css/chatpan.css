@@ -7,6 +7,13 @@
 .aio {
     background: rgba(var(--color-card-rgb), 0.3);
 }
+.aio .chat-input-area {
+    background: var(--color-card-1);
+    border-radius: 7px;
+    margin: 20px;
+    z-index: 9;
+  }
+  
 
 .chat-header {
     margin: 20px;
@@ -66,6 +73,16 @@
 }
 .group-member {
     background: var(--color-card-1) !important;
+}
+.group-panel > div:last-child {
+    background: var(--color-card-1);
+    margin-bottom: 20px;
+    /* margin-right: 20px; */
+    width: 220px;
+}
+.group-panel div.group-box {
+    border-radius: 7px;
+    overflow: hidden;
 }
 
 /* 附加面板 */

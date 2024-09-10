@@ -1,0 +1,13 @@
+#login {
+    background-color: var(--color-card-1);
+}
+#login canvas {
+    display: none;
+}
+#login div.operation > span {
+    color: var(--color-main);
+}
+
+.qq-logo-icon {
+    display: none;
+}

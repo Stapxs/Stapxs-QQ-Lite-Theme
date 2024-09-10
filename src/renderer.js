@@ -31,7 +31,7 @@ function updateTheme(config) {
     log('更新主题：' + JSON.stringify(config))
     try {
         if(config) {
-            if(config.color) {
+            if(config.color != undefined) {
                 document.documentElement.style.setProperty('--color-main', 'var(--color-main-' + config.color + ')')
                 const meta = document.getElementsByName('theme-color')[0]
                 if(meta) {
@@ -40,11 +40,13 @@ function updateTheme(config) {
                 }
             }
             if(config.bg != undefined && config.bg.indexOf('url("local:///') == 0) {
-                document.getElementsByClassName('two-col-layout__main')[0].style
-                    .background = config.bg
+                if(document.getElementsByClassName('two-col-layout__main')[0])
+                    document.getElementsByClassName('two-col-layout__main')[0].style
+                        .background = config.bg
             } else {
-                document.getElementsByClassName('two-col-layout__main')[0].style
-                    .background = 'var(--color-card)'
+                if(document.getElementsByClassName('two-col-layout__main')[0])
+                    document.getElementsByClassName('two-col-layout__main')[0].style
+                        .background = 'var(--color-card)'
             }
             if(config.opacity && typeof config.opacity == 'number') {
                 const list = [
@@ -58,7 +60,8 @@ function updateTheme(config) {
             }
         }
     } catch (err) {
-        error('更新主题失败：', err.toString())
+        error('更新主题失败：', err.toString() + '\n' + err.stack)
+        
     }
 }
 
@@ -129,6 +132,7 @@ const onSettingCreate = async (view) => {
         // 添加设置主体
         const settingHtml = await bcui_theme.getSettingHTML()
         const configs = await bcui_theme.getSetting()
+        updateTheme(configs)
         const settingView = document.createElement('div')
         settingView.innerHTML = settingHtml
         // 设置元素和保存操作
@@ -151,21 +155,29 @@ const onSettingCreate = async (view) => {
                 case 'range':
                 case 'select-one': {
                     dom.addEventListener('change', () => {
-                        bcui_theme.setSetting(key, Number(dom.value))
-                        updateSettingPage(view)
+                        try {
+                            bcui_theme.setSetting(key, Number(dom.value))
+                            updateSettingPage(view)
+                        } catch (err) {
+                            error('设置设置失败：', err.toString())
+                        }
                     })
                     break
                 }
                 case 'submit': {
                     dom.addEventListener('click', () => {
-                        if(key == 'bg') {
-                            bcui_theme.chooseImage()
+                        try {
+                            if(key == 'bg') {
+                                bcui_theme.chooseImage()
+                            }
+                            if(key == 'bgName') {
+                                bcui_theme.setSetting('bg', '')
+                                bcui_theme.setSetting('bgName', '')
+                            }
+                            updateSettingPage(view)
+                        } catch (err) {
+                            error('设置设置失败：', err.toString())
                         }
-                        if(key == 'bgName') {
-                            bcui_theme.setSetting('bg', '')
-                            bcui_theme.setSetting('bgName', '')
-                        }
-                        updateSettingPage(view)
                     })
                     break
                 }
@@ -182,9 +194,10 @@ const onSettingCreate = async (view) => {
 async function updateSettingPage(view) {
     const configs = await bcui_theme.getSetting()
     const bgName = view.getElementsByClassName('bcui-bg-name')[0]
-    if(configs.bgName && configs.bgName != '')
+    if(configs.bgName && configs.bgName != '') {
         bgName.innerText = configs.bgName
-    else {
+        view.getElementsByClassName('bcui-bgName')[0].style.display = 'block'
+    } else {
         bgName.style.display = 'none'
         view.getElementsByClassName('bcui-bgName')[0].style.display = 'none'
     }

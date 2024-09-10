@@ -322,7 +322,6 @@ footer header span {
 .avatar {
     cursor: hand;
     overflow: hidden;
-    margin-left: 20px;
     --main-size: 33px;
     margin-right: 5px;
     width: var(--main-size);
@@ -414,7 +413,7 @@ code[class*=language-] {
     border-radius: 6px;
 }
 ::-webkit-scrollbar {
-    background-color:var(--color-card-1);
+    background-color:transparent;
     width:6px;
 }
 ::-webkit-scrollbar-button {
@@ -425,7 +424,6 @@ code[class*=language-] {
     .avatar {
         width: auto;
         height: auto;
-        margin-left: 0;
         border-radius: 0;
         background: none;
     }

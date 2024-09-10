@@ -1,15 +1,18 @@
 .q-button {
     background: var(--color-main);
     color: var(--color-font-r);
+    border: unset;
 }
 .q-button:hover {
-    background: var(--color-main);
+    background: var(--color-main) !important;
     opacity: 0.8;
+}
+.q-button.loading {
+    background: var(--color-main) !important;
+    opacity: 0.5;
 }
 
 .q-context-menu {
-    background: transparent;
-    backdrop-filter: blur(10px);
     min-width: 150px;
 }
 .q-context-menu > a {
@@ -52,4 +55,14 @@
 .q-empty-page {
     background: transparent;
     box-shadow: unset;
+}
+
+.q-svg-icon:hover {
+    color: var(--color-main) !important;
+}
+
+/* =================================================== */
+
+.container > div.tab-container {
+    margin-left: -16px;
 }
