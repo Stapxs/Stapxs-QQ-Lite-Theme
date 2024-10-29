@@ -26,6 +26,7 @@ body[q-theme="dark"][is-simple-theme="true"] .recent-contact-list div.viewport-l
   background: var(--color-main) !important;
 }
 body[q-theme="dark"][is-simple-theme="true"] .recent-contact-list div.viewport-list__inner > div.recent-contact-item--selected .item__content div,
+.recent-contact-list div.viewport-list__inner > div.recent-contact-item--selected .item__content i,
 .recent-contact-list div.viewport-list__inner > div.recent-contact-item--selected .item__content div {
     color: var(--color-font-r) !important;
 }

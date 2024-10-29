@@ -1,5 +1,4 @@
 /* 侧边栏 */
-
 .sidebar {
     background: transparent !important;
 }
@@ -23,8 +22,24 @@
     filter: brightness(0) invert(1);
 }
 /* 隐藏 .sidebar__nav > div 超过第二个的元素 */
-.sidebar__nav > div:nth-child(n+3) {
+/* .sidebar__nav > div:nth-child(n+3) {
     display: none !important;
+} */
+
+/* 通话 */
+.avatar--phone i {
+    color: var(--color-font) !important;
+}
+.phone_bg {
+    width: calc(100% - 5px) !important;
+    border-radius: 7px !important;
+}
+.av-call-status {
+    border: 1px solid var(--color-card-2) !important;
+    background: var(--color-card-1) !important;
+    width: calc(100% - 40px) !important;
+    margin: 10px 20px 0 20px;
+    border-radius: 7px;
 }
 
 @media (prefers-color-scheme: dark) {
