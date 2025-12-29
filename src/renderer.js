@@ -44,7 +44,7 @@ function updateTheme(config) {
                     document.getElementsByClassName('two-col-layout__main')[0].style
                         .background = config.bg
             } else {
-                if(document.getElementsByClassName('two-col-layout__main')[0])
+                if(document.getElementsByClassName('two-col-layout__main')[0] && config['transparent-mode'] != 1)
                     document.getElementsByClassName('two-col-layout__main')[0].style
                         .background = 'var(--color-card)'
             }
@@ -136,6 +136,7 @@ const onSettingCreate = async (view) => {
         const settingView = document.createElement('div')
         settingView.innerHTML = settingHtml
         // 设置元素和保存操作
+        log('设置配置项：' + JSON.stringify(configs))
         Object.keys(configs).forEach(key => {
             const value = configs[key]
             const dom = settingView.querySelector(`[name="bcui-${key}"]`)
@@ -188,6 +189,7 @@ const onSettingCreate = async (view) => {
         updateSettingPage(view)
     } catch (err) {
         error('创建设置页面失败：', err.toString())
+        console.error(err)
     }
 }
 

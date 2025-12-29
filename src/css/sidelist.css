@@ -1,12 +1,25 @@
-/* 侧边列表 */
+/* 顶栏 */
 
+.global-container .container-topbar {
+    margin-bottom: -40px;
+    opacity: 0;
+}
+
+/* 侧边列表 */
+.resize-handler {
+    opacity: 0 !important;
+}
 .tab-container {
     background: transparent !important;
 }
 
+.container-content-view {
+    background: unset !important;
+}
 
 .recent-contact {
-    background: none !important;
+    background: unset !important;
+    margin-top: 30px;
 }
 .recent-contact .viewport-list__inner {
     display: flex;
@@ -19,16 +32,18 @@
     border-radius: 7px;
 }
 .recent-contact-list div.viewport-list__inner > div.recent-contact-item > div {
-    padding: 10px 15px !important;
+    padding: 10px !important;
 }
 body[q-theme="dark"][is-simple-theme="true"] .recent-contact-list div.viewport-list__inner > div.recent-contact-item--selected .item__content,
 .recent-contact-list div.viewport-list__inner > div.recent-contact-item--selected .item__content {
   background: var(--color-main) !important;
+  border-radius: 7px !important;
 }
 body[q-theme="dark"][is-simple-theme="true"] .recent-contact-list div.viewport-list__inner > div.recent-contact-item--selected .item__content div,
 .recent-contact-list div.viewport-list__inner > div.recent-contact-item--selected .item__content i,
 .recent-contact-list div.viewport-list__inner > div.recent-contact-item--selected .item__content div {
     color: var(--color-font-r) !important;
+    border-radius: 7px !important;
 }
 
 .radio-tab__item--background {
@@ -59,16 +74,27 @@ body[q-theme="dark"][is-simple-theme="true"] .recent-contact-list div.viewport-l
     margin-left: -45px;
 }
 .recent-contact-list, .group-assistent-list {
+    margin-top: 5px;
     padding-right: 4px;
 }
 .recent-contact-list::-webkit-scrollbar,                    /* 消息列表滚动条 */
 .group-assistent-list::-webkit-scrollbar {
     display: none !important;
 }
+.group-assistent-list .group-assistent-list__top {
+    padding: 0 16px 0 0;
+}
+
+.recent-contact-item.recent-contact-item--top .item__content {
+    border-radius: 7px;
+}
 
 .contact-top-bar {
     margin-bottom: -100px;
     margin-top: 30px;
+}
+.search-content {
+    display: none !important;
 }
 
 .list-item:hover {
@@ -84,6 +110,9 @@ body[q-theme="dark"][is-simple-theme="true"] .recent-contact-list div.viewport-l
     width: 33px !important;
 }
 
+.contact {
+    margin-top: 30px;
+}
 .contact,
 .q-collapse-item__header,
 .contact div.tab-header {

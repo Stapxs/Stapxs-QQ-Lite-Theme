@@ -1,6 +1,10 @@
-.liteloader > div img {
-    width: 20px;
-    height: 20px;
+/* 侧边栏样式微调 */
+.liteloader > div[data-slug="border-card-ui-theme"] img {
+    width: 17px;
+    height: 17px;
+}
+.setting-tab {
+    flex-basis: 220px !important;
 }
 
 /* 覆盖原始设置样式 */
@@ -55,8 +59,8 @@
 .chat-page__item input[type="range"]::-webkit-slider-thumb,
 .chat-page__item input[type="range"]::-moz-range-thumb {
     -webkit-appearance: none;
-    width: 20px;
-    height: 20px;
+    width: 10px;
+    height: 10px;
     background: var(--color-main);
     border-radius: 50%;
     cursor: pointer;

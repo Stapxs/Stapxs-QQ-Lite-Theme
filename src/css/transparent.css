@@ -1,0 +1,20 @@
+.two-col-layout__main {
+    background: none !important;
+    box-shadow: none;
+}
+
+.aio,
+.setting-layout .setting-main {
+    background: none !important;
+}
+
+.aio .chat-input-area,
+.chat-header {
+    background: rgba(var(--color-card-1-rgb), .6) !important;
+}
+/* .setting-main__content > div > div > div > div:has(> *) {
+    background: rgba(var(--color-card-1-rgb), .6) !important;
+}
+.setting-main__content > div > div > div:has(> :first-child):not(:has(> :nth-child(2))) {
+    background: rgba(var(--color-card-1-rgb), .3) !important;
+} */

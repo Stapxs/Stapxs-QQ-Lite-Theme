@@ -12,7 +12,7 @@
 
 ## 版本支持
 - LiteLoaderQQNT >= 1.2.0
-- NTQQ Build >= 27254
+- NTQQ Build >= 42941
 
 ## 使用方法
 ### 使用仓库版本

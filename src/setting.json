@@ -1,5 +1,6 @@
 {
     "color": "0",
     "bg": "",
-    "opacity": 5
+    "opacity": 5,
+    "transparent-mode": 0
 }

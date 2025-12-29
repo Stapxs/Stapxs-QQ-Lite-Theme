@@ -13,6 +13,11 @@ const error = (...args) => {
     console.log('\x1b[31m[bcui-theme]\x1b[0m', ...args)
 }
 
+const isTransparentMode = () => {
+    let setting = getSetting('transparent-mode')
+    return setting === 1
+}
+
 // 获取当前有哪些css
 const cssPath = path.join(__dirname, 'css')
 // 寻找这个文件夹下所有的 .css 后缀文件（包括子文件夹）
@@ -21,14 +26,21 @@ function getAllCssFiles(dirPath, arrayOfFiles) {
 
     arrayOfFiles = arrayOfFiles || []
 
-    files.forEach((file) => {
+    for(let i=0; i<files.length; i++) {
+        const file = files[i]
         const filePath = path.join(dirPath, file)
+        const fileName = path.basename(filePath)
+        
+        // 如果不是透明模式，排除 transparent.css
+        if (!isTransparentMode() && fileName === 'transparent.css') {
+            continue
+        }
         if (fs.statSync(filePath).isDirectory()) {
             arrayOfFiles = getAllCssFiles(filePath, arrayOfFiles)
         } else if (file.endsWith('.css')) {
             arrayOfFiles.push(filePath)
         }
-    })
+    }
 
     return arrayOfFiles
 }
@@ -49,14 +61,20 @@ function updateStyle(webContents) {
 }
 
 // 获取设置
-function getSetting() {
+function getSetting(name = null) {
+    let data = undefined
     try {
         log('正在获取全量设置……')
         let rawdata = fs.readFileSync(settingPath)
-        return JSON.parse(rawdata)
+        data = JSON.parse(rawdata)
     } catch (err) {
         error('获取全量设置失败：', err.toString())
         return null
+    }
+    if(name) {
+        return data[name]
+    } else {
+        return data
     }
 }
 // 设置设置

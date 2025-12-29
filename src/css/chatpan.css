@@ -11,7 +11,7 @@
     background: var(--color-card-1);
     border-radius: 7px;
     padding: 10px 0px;
-    margin: 20px;
+    margin: 10px;
     z-index: 9;
 }
 .send-btn-wrap {
@@ -19,11 +19,11 @@
 }
 
 .chat-header {
-    margin: 20px;
+    margin: 10px;
     border-radius: 7px;
     display: flex !important;
     align-items: center !important;
-    padding: 0 20px !important;
+    padding: 0 10px !important;
     background: rgba(var(--color-card-1-rgb),.8);
     backdrop-filter: blur(50px);
     z-index: 10;
@@ -39,24 +39,24 @@ body[q-platform="darwin"] .chat-header {
 }
 
 .group-chat {
-    margin-top: -20px;
-    height: calc(100% + 20px) !important;
+    margin-top: -10px;
+    height: calc(100% + 10px) !important;
 }
 
 /* 消息 */
 .message-content__wrapper > div {
     background: var(--color-card-1) !important;
 }
-.message-content__wrapper >div.container--self {
+/* .message-content__wrapper >div.container--self {
     background: var(--color-main) !important;
     color: var(--color-font-r) !important;
-}
-.message-content__wrapper >div.container--self span {
+} */
+/* .message-content__wrapper >div.container--self span {
     color: var(--color-font-r) !important;
-}
-.message-content__wrapper >div.container--self div.reply-element {
+} */
+/* .message-content__wrapper >div.container--self div.reply-element {
     border-color: var(--color-font-r);
-}
+} */
 .chat-msg-area__tip--bottom {
     transform: translateY(10px);
     margin-right: 25px !important;
@@ -67,6 +67,10 @@ body[q-platform="darwin"] .chat-header {
 }
 .babble {
     background: var(--color-card-1) !important;
+}
+.q-notification .q-svg-icon,
+.q-notification .content {
+    color: var(--color-main) !important;
 }
 
 /* 群/好友信息栏 */
@@ -86,9 +90,10 @@ body[q-platform="darwin"] .chat-header {
 }
 .group-panel > div:last-child {
     background: var(--color-card-1);
-    margin-bottom: 20px;
-    /* margin-right: 20px; */
-    width: 220px;
+    margin-bottom: 10px;
+    /* margin-right: 10px; */
+    border-radius: 7px;
+    width: 210px;
 }
 .group-panel div.group-box {
     border-radius: 7px;
@@ -125,7 +130,7 @@ body[q-platform="darwin"] .chat-header {
 .aio .chat-input-area {
     background: var(--color-card-1);
     border-radius: 7px;
-    margin: 20px;
+    margin: 10px;
     z-index: 9;
 }
 

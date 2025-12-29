@@ -4,8 +4,8 @@
   "type": "theme",
   "name": "Border Card UI Theme",
   "slug": "border-card-ui-theme",
-  "description": "Stapxs QQ Lite 2.0 Electron 版 LiteLoaderQQNT 迁移主题。",
-  "version": "1.0.6",
+  "description": "Stapxs QQ Lite 2.0 桌面版主题的 LiteLoaderQQNT 移植。",
+  "version": "1.0.7",
   "icon": "./res/icon.png",
   "thumb": "./res/icon.png",
   "authors": [
