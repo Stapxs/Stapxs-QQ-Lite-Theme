@@ -65,6 +65,11 @@ body[q-platform="darwin"] .chat-header {
     transform: translateY(120%);
     margin-right: 25px;
 }
+.chat-msg-area__tip--top div.horseman {
+    width: calc(100% - 20px) !important;
+    margin-left: 10px;
+    margin-top: 10px;
+}
 .babble {
     background: var(--color-card-1) !important;
 }

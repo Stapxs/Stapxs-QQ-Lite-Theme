@@ -97,11 +97,29 @@ body[q-theme="dark"][is-simple-theme="true"] .recent-contact-list div.viewport-l
     display: none !important;
 }
 
-.list-item:hover {
-    background-color: rgba(var(--color-card-1) 0.1) !important;
-  }
 .list-item__container > div.list-item__content {
     padding: 10px !important;
+}
+.recent-contact-item .item__content {
+    transition: background-color 0.3s ease, margin-left 0.3s ease;
+}
+.recent-contact-item:has(.summary-bubble sub.q-badge__red) {
+    position: relative;
+}
+.recent-contact-item:has(.summary-bubble sub.q-badge__red)::before {
+    content: '';
+    background: var(--color-main);
+    border-radius: 10px;
+    top: calc(35px / 2);
+    position: absolute;
+    display: block;
+    height: 25px;
+    z-index: 10;
+    width: 5px;
+    left: 8px;
+}
+.recent-contact-item:has(.summary-bubble sub.q-badge__red) > div.item__content {
+    margin-left: 20px !important;
 }
 .recent-contact-item .avatar {
     outline: 2px solid var(--color-card-2);
